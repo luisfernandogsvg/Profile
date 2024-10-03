@@ -9,57 +9,240 @@ comentário para css
     box-sizing: border-box;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+html {
+    height: 100vh;
+}
+
+
+
+/* Definição  do tamanho da tela */
 body {
-    background-color: #1111c65e;
-    padding: 0%;
-    margin: 0%;
-    border: 0;
-    background-image:  linear-gradient(rgba(119, 227, 182, 0.486),rgb(45, 146, 45));
-    display: flexbox;
+    font-family: Arial, sans-serif;
+    background-image: url("../pântano01.jpg");
+    /*background-image: linear-gradient(to bottom, #3632bb, #e7bfa5);*/
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+    background-color: linear-gradient (to bottom, #b8260c, #000000);
+
 }
+
 header {
-    background-color: #35d5d800;
-    height: 250px;
-    padding: 7px;
+    background-color: #3e5b64;
+    margin-top: 3px;
+    border-radius: 7px 7px 0px 0px;
+    width: 90vw;
+    margin: auto;
 }
-h1 {
-    color: #f1f0f0;
-    font-size: 30px;
-    padding: 30%;
-}
-nav {
-    padding: 7px;
-    background-color: #ede0e0;
+
+header>h1 {
     text-align: center;
-    vertical-align: middle;
-    height: 0px;
-}
-main {
-    background-color: #333;
-    height: auto;
-    padding: 7px;
-}
-p {
-    color: #fff;
-    font-size: 100%;
-    padding: 0%;
-}
-a {
     color: #ffffff;
-    text-decoration: none;
+    padding: 30px;
+    /*text-shadow: #ffffff 1px 1px 10px;*/
+    margin-top: 17px;
+    height: 0px;
+    font-size: 19px;
 }
-a :hover {
-    color: #c32a2a;
-    text-decoration: none;
-}
-footer {
-    background-color: #c08787;
+
+#burger {
+    background-color: #000000cc;
+    display: block;
+    color: rgba(255, 255, 255, 0.979);
     text-align: center;
-    vertical-align: center;
-    height: 175px;
-    padding: 17px;
+    margin: auto;
+    padding: 0px;
+    width: 90vw;
+    cursor: pointer;
 }
-img {
-    width: 30%;
-    height: 30%;
+
+#burger:hover {
+    background-color: #199ab1;
+}
+
+menu {
+    color: #a0040465;
+    text-align: center;
+    list-style-type: none;
+    width: 90vw;
+    margin: auto;
+    display:none
+}
+
+menu>ul {
+    list-style-type: none;
+}
+
+menu>ul>li>a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #3c5158bd;
+    border-radius: 0px 0px 0px 0px;
+    color: #2ccfba;
+    margin: auto;
+
+}
+
+menu>ul>li>a:hover {
+    background-color: #1031c286;
+    color: rgb(12, 146, 68);
+    text-decoration: none;
+    
+}
+
+
+main {
+    background-color: #fff1df;
+    width: 90vw;
+    margin: auto;
+    border-radius: 7px 7px 0px 0px;
+    margin-top: 7px;
+    padding: 3px;
+}
+
+main img {
+    display: block;
+    margin: auto;
+}
+
+article>h2 {
+    padding-bottom: 17px;
+    text-align: center;
+    color: #277c6a;
+    font-size: 30px;
+}
+
+article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+    font-size: 15px;
+    color: #6b6969;
+}
+
+footer {
+    background-color: #567474;
+    text-align: center;
+    border-radius: 0px 0px 7px 7px;
+    width: 90vw;
+    padding: 0px;
+    margin: auto;
+    height: 25px;
+    font-size: 19px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+
+/* configuração e definição de imagens para mobile-first */
+/*img {
+    display: block;
+    margin: auto;
+}*/
+
+img#mobile {
+    display: block;
+}
+
+img#tablet {
+    display: none;
+}
+
+img#print {
+    display: none;
+}
+
+img#pc {
+    display: none;
+}
+
+img#tv {
+    display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image:url("../pântano02.jpg");
+        background-size: 100%;
+    }
+
+    #burger {
+        display: block;
+        color: rgba(255, 255, 255, 0.979);
+        text-align: center;
+        margin: auto;
+        padding: 0px;
+        width: 90vw;
+        cursor: pointer;
+    }
+
+
+    menu {
+        display: block;
+        width: 90vw;
+        margin: auto;
+        background-color: #25244b;
+        display: none;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+        background-color: #25244b;
+       
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    img#mobile {
+        display: none;
+    }
+
+    img#mobile {
+        display: block;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+#icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: -5px;
 }

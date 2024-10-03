@@ -2,29 +2,44 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="shortcut icon" href="/assent/sapo-lexo-salazar.png" type="imgage/x-icon">
-    <link  rel="stylesheet" href="/assent/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>salazar</title>
+    <link  rel="shortcut icon" href="assent/sapo-lexo-salazar.png" type="imgage/x-icon">
+    <link  rel="stylesheet" href="assent/css/style.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<body>
-    
-</body>
-<header>
-    <h1>
-         <!--tag para comentar o código-->
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>
+           <!--tag para comentar o código-->
         Sapinho
-    </h1>
-   
-</header>
-<nav>
-    <a  href="/index.html">pagina01</a>
-</nav>
-<main>
-    <div class="imgmain">
-        <img src="/assent/sapo-lexo-salazar.png" width="45%" height="100%">
-         
-    </div>
+        </h1>
+    </header>
+
+    <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">
+        menu
+    </span>
+    <menu id="itens">
+          <ul>
+            <li><a href="/index.html"><img src="/assent/pagina01.png" id="icon">Página1</a></li>
+            <li><a href="/home.html"><img src="/assent/pagina02.png" id="icon">Página2</a></li>
+            <li><a href="/pagina03.html"><img  src="/assent/pagina03.png" id="icon">Página3</a></li>
+            <li><a href="/pagina04.html"><img  src="/assent/pagina04.png" id="icon">Página4</a></li>
+        </ul>
+    </menu>
+    <main>
+        <div class="container" id="container">
+        <img src="/assent/sapo-lexo-salazar.png" width="300" height="300" id="mobile">
+
+        <img src="/assent/sapo02.png" width="300" height="300" id="mobile">
+
+        <img src="/assent/sapo03.png"  width="100" height="100" id="print">
+
+        <img src="/assent/sapo04.png"  width="100" height="100" id="pc">
+
+<article>
+    <h2>Lexo salazar</h2>
     <!--Paragrafo para crir uma linha de texto e deixar um espaço entre ele e o titulo-->
     <!--não se poe colocar um comentário ao lado de um código, ele deve ser colocado em uma linha acima do código-->
     <p>
@@ -41,8 +56,13 @@
          No entanto, enfrentam ameaças como perda de habitat e doenças, 
          o que destaca a necessidade urgente de esforços de conservação para garantir sua sobrevivência e, por consequência, a saúde dos ecossistemas em que vivem.
     </p>
-</main>
+</article>
+</div>
+    </main>
 <footer>
     @2024-Luis F
 </footer>
+</body>
+<script src="./assent/js/scriptmq.js"></script>
+
 </html>
