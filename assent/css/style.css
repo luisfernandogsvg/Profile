@@ -19,13 +19,13 @@ html {
 /* Definição  do tamanho da tela */
 body {
     font-family: Arial, sans-serif;
-    background-image: url("../pântano01.jpg");
+    background-image: url("../pântano02.jpg");
     /*background-image: linear-gradient(to bottom, #3632bb, #e7bfa5);*/
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: scroll;
     background-color: linear-gradient (to bottom, #b8260c, #000000);
-
+    background-size: 100%;
 }
 
 header {
@@ -38,12 +38,11 @@ header {
 
 header>h1 {
     text-align: center;
-    color: #ffffff;
-    padding: 30px;
+    color: #dddddd;
+    padding: 20px;
     /*text-shadow: #ffffff 1px 1px 10px;*/
     margin-top: 17px;
-    height: 0px;
-    font-size: 19px;
+    font-size: 30px;
 }
 
 #burger {
@@ -58,11 +57,11 @@ header>h1 {
 }
 
 #burger:hover {
-    background-color: #199ab1;
+    background-color: #12ceef;
 }
 
 menu {
-    color: #a0040465;
+    color: #692222b5;
     text-align: center;
     list-style-type: none;
     width: 90vw;
@@ -78,16 +77,16 @@ menu>ul>li>a {
     display: block;
     padding: 7px;
     text-decoration: none;
-    text-align: center;
-    background-color: #3c5158bd;
+     text-align: center;
+    background-color: #3e5b64c2; 
     border-radius: 0px 0px 0px 0px;
-    color: #2ccfba;
+    color: #5085ee;
     margin: auto;
 
 }
 
 menu>ul>li>a:hover {
-    background-color: #1031c286;
+    background-color: #575d7786;
     color: rgb(12, 146, 68);
     text-decoration: none;
     
@@ -118,6 +117,7 @@ article>h2 {
 article>p {
     text-align: justify;
     margin-bottom: 17px;
+    padding: 17px;
     text-indent: 17px;
     font-size: 15px;
     color: #6b6969;
@@ -134,10 +134,10 @@ footer {
     font-size: 19px;
 }
 
-.container {
+/*.container {
     display: flex;
     align-items: center;
-}
+} *
 
 
 /* configuração e definição de imagens para mobile-first */
@@ -166,35 +166,35 @@ img#tv {
     display: none;
 }
 
+#icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: -5px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body {
-        background-image:url("../pântano02.jpg");
-        background-size: 100%;
+        background-image:url("/assent/pântano02.jpg");
+
     }
 
     #burger {
-        display: block;
-        color: rgba(255, 255, 255, 0.979);
-        text-align: center;
-        margin: auto;
-        padding: 0px;
-        width: 90vw;
-        cursor: pointer;
+        display: none;
+        
     }
-
 
     menu {
         display: block;
         width: 90vw;
         margin: auto;
-        background-color: #25244b;
-        display: none;
+        background-color: #670d0d81;
     }
 
     menu>ul>li {
         display: inline-block;
-        background-color: #25244b;
-       
+        background-color: #fe000000;
+
     }
 
     main {
@@ -219,12 +219,13 @@ img#tv {
         margin: auto;
     }
 
-    img#mobile {
-        display: none;
-    }
 
     img#mobile {
         display: block;
+    }
+
+    img#tablet {
+        display: none;
     }
 
     img#print {
@@ -240,9 +241,146 @@ img#tv {
     }
 }
 
-#icon{
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    margin-bottom: -5px;
+
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image:url("/assent/pântano02.jpg");
+    }
+
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #151734d4;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+       
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    } 
+    
+
+    img#mobile {
+        display: block;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
 }
+
+
+/* media para smart_tv com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-image:url("/assent/pântano02.jpg");
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #2f6f9c8b;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+       
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    } 
+    
+
+    img#mobile {
+        display: block;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
