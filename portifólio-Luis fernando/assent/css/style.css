@@ -1,0 +1,422 @@
+@charset "utf-8";
+
+/*
+comentário para css
+*/
+*{ 
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html {
+    height: 100vh;
+}
+
+
+
+/* Definição  do tamanho da tela */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../pântano01.jpg");
+    /* background-image: linear-gradient(to bottom, #3632bb, #e7bfa5); */
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+    background-size: 100%;
+}
+
+header {
+    background-color: #3e5b64;
+    margin-top: 3px;
+    border-radius: 7px 7px 0px 0px;
+    width: 90vw;
+    margin: auto;
+}
+
+header>h1 {
+    text-align: center;
+    color: #dddddd;
+    padding: 20px;
+    /*text-shadow: #ffffff 1px 1px 10px;*/
+    margin-top: 17px;
+    font-size: 30px;
+}
+
+#burger {
+    background-color: #000000cc;
+    display: block;
+    color: rgba(255, 255, 255, 0.979);
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+    width: 90vw;
+    cursor: pointer;
+}
+
+#burger:hover {
+    background-color: #12ceef;
+}
+
+menu {
+    color: #692222b5;
+    text-align: center;
+    list-style-type: none;
+    width: 90vw;
+    margin: auto;
+    display:none
+}
+
+menu>ul {
+    list-style-type: none;
+}
+
+menu>ul>li>a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+     text-align: center;
+    background-color: #3e5b64c2; 
+    border-radius: 0px 0px 0px 0px;
+    color: #5085ee;
+    margin: auto;
+
+}
+
+menu>ul>li>a:hover {
+    background-color: #575d7786;
+    color: rgb(12, 146, 68);
+    text-decoration: none;
+    
+}
+
+
+main {
+    background-color: #fff1df;
+    width: 90vw;
+    margin: auto;
+    border-radius: 7px 7px 0px 0px;
+    margin-top: 7px;
+    padding: 3px;
+}
+
+main img {
+    display: block;
+    margin: auto;
+}
+
+article>h2 {
+    padding-bottom: 17px;
+    text-align: center;
+    color: #277c6a;
+    font-size: 30px;
+}
+
+article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    padding: 17px;
+    text-indent: 17px;
+    font-size: 15px;
+    color: #6b6969;
+}
+
+footer {
+    background-color: #567474;
+    text-align: center;
+    border-radius: 0px 0px 7px 7px;
+    width: 90vw;
+    padding: 0px;
+    margin: auto;
+    height: 25px;
+    font-size: 19px;
+}
+
+/*.container {
+    display: flex;
+    align-items: center;
+} *
+
+
+/* configuração e definição de imagens para mobile-first */
+/*img {
+    display: block;
+    margin: auto;
+}*/
+
+img#mobile {
+    display: block;
+}
+
+img#tablet {
+    display: none;
+}
+
+img#print {
+    display: none;
+}
+
+img#pc {
+    display: none;
+}
+
+img#tv {
+    display: none;
+}
+
+#icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: -5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image:url("/assent/pântano03.jpg");
+
+    }
+
+    #burger {
+        display: none;
+        
+    }
+
+    menu {
+        display: block;
+        width: 90vw;
+        margin: auto;
+        background-color: #151734d4;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+         background-color: none; 
+
+    }
+
+    menu>ul>li>a {
+        display: block;
+        padding: 7px;
+        text-decoration: none;
+         text-align: center;
+        background-color: #00c3ff00; 
+        border-radius: 0px 0px 0px 0px;
+        color: #3062c6;
+        margin: auto;
+    
+    }
+    
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: block;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image:url("/assent/pântano04.jpg");
+    }
+
+    
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #151734d4;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+       
+    }
+
+    menu>ul>li>a {
+        display: block;
+        padding: 7px;
+        text-decoration: none;
+         text-align: center;
+        background-color: #00c3ff00; 
+        border-radius: 0px 0px 0px 0px;
+        color: #3062c6;
+        margin: auto;
+    
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    } 
+    
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: block;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+
+/* media para smart_tv com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-image:url("/assent/pântano02.jpg");
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #151734d4;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+       
+    }
+
+    menu>ul>li>a {
+        display: block;
+        padding: 7px;
+        text-decoration: none;
+         text-align: center;
+        background-color: #00c3ff00; 
+        border-radius: 0px 0px 0px 0px;
+        color: #3062c6;
+        margin: auto;
+    
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+     } 
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    } 
+    
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: block;
+    }
+}
+
